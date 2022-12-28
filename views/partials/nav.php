@@ -16,19 +16,19 @@
                             Inicio
                         </a>
 
-                        <a href="/contact.php"
+                        <a href="/contacto"
                            class="<?= urlIs(
-                               '/contact.php'
+                               '/contacto'
                            ) ? 'bg-zinc-900 text-white' : 'text-zinc-300 hover:bg-zinc-700 hover:text-white' ?> px-3 py-2 rounded-md text-sm font-medium"
-                            <?= urlIs('/contact.php') ? "aria-current='page'" : '' ?>>
+                            <?= urlIs('/contacto') ? "aria-current='page'" : '' ?>>
                             Contacto
                         </a>
 
-                        <a href="/about.php"
+                        <a href="/nosotros"
                            class="<?= urlIs(
-                               '/about.php'
+                               '/nosotros'
                            ) ? 'bg-zinc-900 text-white' : 'text-zinc-300 hover:bg-zinc-700 hover:text-white' ?> px-3 py-2 rounded-md text-sm font-medium"
-                            <?= urlIs('/about.php') ? "aria-current='page'" : '' ?>>
+                            <?= urlIs('/nosotros') ? "aria-current='page'" : '' ?>>
                             Nosotros
                         </a>
 
