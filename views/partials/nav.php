@@ -8,15 +8,29 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <!-- Current: "bg-zinc-900 text-white", Default: "text-zinc-300 hover:bg-zinc-700 hover:text-white" -->
-                        <a href="/" class="bg-zinc-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                           aria-current="page">Inicio</a>
+                        <a href="/"
+                           class="<?= urlIs(
+                               '/'
+                           ) ? 'bg-zinc-900 text-white' : 'text-zinc-300 hover:bg-zinc-700 hover:text-white' ?> px-3 py-2 rounded-md text-sm font-medium"
+                           <?= urlIs('/') ? "aria-current='page'" : '' ?>>
+                            Inicio
+                        </a>
 
                         <a href="/contact.php"
-                           class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+                           class="<?= urlIs(
+                               '/contact.php'
+                           ) ? 'bg-zinc-900 text-white' : 'text-zinc-300 hover:bg-zinc-700 hover:text-white' ?> px-3 py-2 rounded-md text-sm font-medium"
+                            <?= urlIs('/contact.php') ? "aria-current='page'" : '' ?>>
+                            Contacto
+                        </a>
 
                         <a href="/about.php"
-                           class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+                           class="<?= urlIs(
+                               '/about.php'
+                           ) ? 'bg-zinc-900 text-white' : 'text-zinc-300 hover:bg-zinc-700 hover:text-white' ?> px-3 py-2 rounded-md text-sm font-medium"
+                            <?= urlIs('/about.php') ? "aria-current='page'" : '' ?>>
+                            Nosotros
+                        </a>
 
                     </div>
                 </div>
