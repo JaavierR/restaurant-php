@@ -1,16 +1,13 @@
 <?php
 
 require 'functions.php';
+require 'Database.php';
 //require 'router.php';
 
-$dsn = "pgsql:host=localhost;port=5432;dbname=restaurant;options='--client_encoding=utf8'";
 
-$pdo = new PDO($dsn, 'postgres', 'changeme');
+$db = new Database();
 
-$statement = $pdo->prepare('select * from products');
-$statement->execute();
-
-$products = $statement->fetchAll(PDO::FETCH_ASSOC);
+$products = $db->query('select * from products')->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($products as $product) {
     echo "<li>" . $product['name'] . '</li>';
