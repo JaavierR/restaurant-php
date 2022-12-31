@@ -7,7 +7,9 @@ require 'Database.php';
 $config = require 'config.php';
 $db = new Database($config['database'], 'mysql', 'changeme');
 
-$products = $db->query('select * from products')->fetchAll();
+$id = $_GET['id'] ?? null;
+$query = 'select * from products where id = :id';
+$products = $db->query($query, ['id' => $id])->fetchAll();
 
 foreach ($products as $product) {
     echo "<li>" . $product['name'] . '</li>';
