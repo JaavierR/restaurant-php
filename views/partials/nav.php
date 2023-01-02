@@ -32,6 +32,14 @@
                             Nosotros
                         </a>
 
+                        <a href="/productos"
+                           class="<?= urlIs(
+                               '/productos'
+                           ) ? 'bg-zinc-900 text-white' : 'text-zinc-300 hover:bg-zinc-700 hover:text-white' ?> px-3 py-2 rounded-md text-sm font-medium"
+                            <?= urlIs('/productos') ? "aria-current='page'" : '' ?>>
+                            Productos
+                        </a>
+
                     </div>
                 </div>
             </div>
